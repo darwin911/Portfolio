@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Darwin Smith | Web Developer</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <header class="nav-header">
+
+    <a class="logo" href="#hero">Darwin Smith</a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" name="nav-toggle" value="">
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#projects">Projects</a></li>
+        <li class="nav-item"><a href="#contact">Contact</a></li>
+      </ul> 
+    </nav>        <!-- /nav-menu -->
+
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span> <!-- Hamburger Button for Mobile -->
+    </label>
+
+  </header>
+
+  <main>
+    
+                  <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="titlebox">
+        <h1 class="hero-title txtctr text-shadow">Web Developer</h1>
+        <h2 class="hero-subtitle txtctr text-shadow">Clean &amp; Responsive</h2>
+      </div>
+    </section>    <!-- /Hero -->
+    
+                  <!-- About -->
+    <section id="about" class="about">
+      <img id="profile-pic" class="profile-pic box-shadow" src="img/profile-lowres.jpg" alt="headshot of Darwin Smith">
+      <h2 class="section-title">Technologies</h2>
+      <ul>
+        <li>
+          <i class="fab fa-html5 icon-size text-shadow"></i>
+          <h4 class='block'>HTML5</h4>
+        </li>
+        <li>
+          <i class="fab fa-css3-alt icon-size text-shadow"></i>
+          <h4 class='block'>CSS3</h4>
+        </li>
+        <li>
+          <i class="fab fa-js-square icon-size text-shadow"></i>
+          <h4 class='block'>JavaScript</h4></li>
+        <li>
+          <i class="fas fa-code icon-size text-shadow"></i>
+          <h4 class='block'>jQuery</h4></li>
+      </ul>
+    </section>    <!-- /About -->
+                  <!-- Projects -->
+    <section id="projects" class="projects">
+
+      <h2 class="section-title">Projects</h2>
+
+      <ul class="gallery container">
+
+        <li class="row">
+          <a href="sagan/index.html" target="_blank"><img class="project-pic box-shadow" src="img/sagan.png" alt="Screenshot of tribute webiste for Carl Sagan"></a>
+          <p class="img-description">For my first project (Carl Sagan Tribute) I created a basic tribute site for Carl Sagan using Bootstrap 4 on CodePen while completing the Front-End Develeopment Course on FreeCodeCamp.</p>
+        </li>
+
+        <li class="row">
+          <a href="bike/index.html" target="_blank"><img class="project-pic box-shadow" src="img/skywalker2.png" alt="Screenshot of a website for Darwin's bike'Skywalker'"></a>
+          <p class="img-description">Skywalker was one of my first websites I made from scratch with only HTML5 and CSS3. It also exemplifies my passion for my favorite hobby other than coding: Cycling.</p>
+        </li>
+
+        <li class="row">
+          <a href="netherpurge/index.html" target="_blank"><img class="project-pic box-shadow" src="img/netherpurge.png" alt="Netherpurge"></a>
+          <p class="img-description">Made Netherpurge while experimenting on new techniques for navbars and CSS3 animations. The small line that pops up on hover was made with pseudo elements (::before &amp; ::after). Used span tags to create different effects within lines of text, linear gradients, and using transparency were among other things I practiced while creating Netherpurge</p>
+        </li>
+
+        <li class="row">
+          <a href="calc/index.html" target="_blank"><img class="project-pic box-shadow" src="img/calc.png" alt="Calculator"></a>
+          <p class="img-description">Created all buttons with an unordered list and added styles to make them look like such. Positioning was a bit tricky but helped me improve my CSS skills. JavaScript is what powers the actual functionality of the calculator. Event Listeners and functional programming was key for this project.</p>
+        </li>
+
+        <li class="row">
+          <a href="fCC_ProductLandingPage/index.html" target="_blank"><img class="project-pic box-shadow" src="img/fCC_ProductLandingPage.png" alt="freeCodeCamp Product Landing Page"></a>
+          <p class="img-description">Created a mockup of a Product Landing Page for freeCodeCamp Web Develeopment course. Used plain CSS to style all form and HTML elements, used SVG's for icons, included a YouTube video with an iframe tag for the first time, applied FlexBox and CSS Grid for layout, as well as media queries for Responsiveness.</p>
+        </li>
+
+      </ul>       <!-- Gallery -->
+
+    </section>    <!-- /Projects -->
+                  <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2 class="section-title">Contact</h2>
+      
+      <form action="https://formspree.io/darwinpsmith@gmail.com" method="POST">
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="_replyto" placeholder="name@email.com" required>
+        
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" placeholder="Type your message here" spellcheck="true" required></textarea>
+
+        <input id="submit" class="box-shadow" type="submit" name="submit" value="Submit">
+
+      </form>
+                          
+    </section>    <!-- Contact -->
+  
+  </main>
+  
+  <footer>
+    <p>Made with HTML5, CSS3, JavaScript & JQuery.</p>
+    <h6>Coded by &copy; <a href="mailto:darwinpsmith@gmail.com">Darwin Smith</a></h6>
+  </footer>
+  
+                    <!-- Load jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+                  <!-- Load ScrollTo -->
+  <script src="http://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+  
+                  <!-- Load localScroll -->
+  <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+  <script src="js/app.js"></script> 
+</body>
+
+</html>
