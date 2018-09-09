@@ -4,7 +4,8 @@
   /* nav background: #262626 */
   --nav-background: #262626;
   --nav-text: lightgrey;
-  --bg-about: #3b1c14;
+  /* #3b1c14 */
+  --bg-about: orangered;
   --bg-projects: #a3693a;
   --bg-contact: #df9a57;
   --light: azure;
