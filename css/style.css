@@ -204,7 +204,7 @@ nav li {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.55);
+  background: radial-gradient(circle at 100% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .85) );
 }
 
 .hero-title {
