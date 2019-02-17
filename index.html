@@ -2,11 +2,21 @@
 <html lang="en">
 
 <head>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-134670953-1');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134670953-1"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.css">
   <title>Darwin Smith | Web Developer</title>
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 </head>
 
@@ -35,10 +45,16 @@
     
                   <!-- Hero -->
     <section id="hero" class="hero">
+
       <div class="titlebox">
-        <h1 class="hero-title txtctr text-shadow">Web Developer</h1>
-        <h2 class="hero-subtitle txtctr text-shadow">Clean &amp; Responsive</h2>
+
+        <div>
+          <h1 class="hero-title txtctr">Web Developer</h1>
+          <h2 class="hero-subtitle txtctr">Clean &amp; Responsive</h2>
+        </div>
+
       </div>
+    
     </section>    <!-- /Hero -->
     
                   <!-- About -->
@@ -47,21 +63,22 @@
       <h2 class="section-title">Technologies</h2>
       <ul>
         <li>
-          <i class="fab fa-html5 icon-size text-shadow"></i>
-          <h4 class='block'>HTML5</h4>
+          <i class="fab fa-html5 icon-size"></i>
+          <h4 class='about-subtitle block'>HTML5</h4>
         </li>
         <li>
-          <i class="fab fa-css3-alt icon-size text-shadow"></i>
-          <h4 class='block'>CSS3</h4>
+          <i class="fab fa-css3-alt icon-size"></i>
+          <h4 class='about-subtitle block'>CSS3</h4>
         </li>
         <li>
-          <i class="fab fa-js-square icon-size text-shadow"></i>
-          <h4 class='block'>JavaScript</h4></li>
+          <i class="fab fa-js-square icon-size"></i>
+          <h4 class='about-subtitle block'>JavaScript</h4></li>
         <li>
-          <i class="fas fa-code icon-size text-shadow"></i>
-          <h4 class='block'>jQuery</h4></li>
+          <i class="fas fa-code icon-size"></i>
+          <h4 class='about-subtitle block'>jQuery</h4></li>
       </ul>
     </section>    <!-- /About -->
+    
                   <!-- Projects -->
     <section id="projects" class="projects">
 
@@ -70,28 +87,32 @@
       <ul class="gallery container">
 
         <li class="row">
-          <a href="sagan/index.html" target="_blank"><img class="project-pic box-shadow" src="img/sagan.png" alt="Screenshot of tribute webiste for Carl Sagan"></a>
-          <p class="img-description">For my first project (Carl Sagan Tribute) I created a basic tribute site for Carl Sagan using Bootstrap 4 on CodePen while completing the Front-End Develeopment Course on FreeCodeCamp.</p>
+          <a href="sagan/index.html" target="_blank"><img class="project-pic" src="img/sagan.png" alt="Screenshot of tribute webiste for Carl Sagan"></a>
+          <p class="img-description">Created a Carl Sagan tribute website using Bootstrap 4 on CodePen while completing the Front-End Develeopment Course on FreeCodeCamp.</p>
         </li>
 
         <li class="row">
-          <a href="bike/index.html" target="_blank"><img class="project-pic box-shadow" src="img/skywalker2.png" alt="Screenshot of a website for Darwin's bike'Skywalker'"></a>
+          <a href="bike/index.html" target="_blank"><img class="project-pic" src="img/skywalker2.png" alt="Screenshot of a website for Darwin's bike'Skywalker'"></a>
           <p class="img-description">Skywalker was one of my first websites I made from scratch with only HTML5 and CSS3. It also exemplifies my passion for my favorite hobby other than coding: Cycling.</p>
         </li>
 
         <li class="row">
-          <a href="netherpurge/index.html" target="_blank"><img class="project-pic box-shadow" src="img/netherpurge.png" alt="Netherpurge"></a>
-          <p class="img-description">Made Netherpurge while experimenting on new techniques for navbars and CSS3 animations. The small line that pops up on hover was made with pseudo elements (::before &amp; ::after). Used span tags to create different effects within lines of text, linear gradients, and using transparency were among other things I practiced while creating Netherpurge</p>
+          <a href="netherpurge/index.html" target="_blank"><img class="project-pic" src="img/netherpurge.png" alt="Netherpurge"></a>
+          <p class="img-description">Made Netherpurge while experimenting on new techniques for navbars and CSS3 animations. The small line that pops up on hover was made with pseudo elements (::before &amp; ::after). Used span tags to create different effects within lines of text, linear gradients, and using transparency were among other things I practiced while creating Netherpurge.</p>
         </li>
 
         <li class="row">
-          <a href="calc/index.html" target="_blank"><img class="project-pic box-shadow" src="img/calc.png" alt="Calculator"></a>
+          <a href="calc/index.html" target="_blank"><img class="project-pic" src="img/calc.png" alt="Calculator"></a>
           <p class="img-description">Created all buttons with an unordered list and added styles to make them look like such. Positioning was a bit tricky but helped me improve my CSS skills. JavaScript is what powers the actual functionality of the calculator. Event Listeners and functional programming was key for this project.</p>
         </li>
 
         <li class="row">
-          <a href="fCC_ProductLandingPage/index.html" target="_blank"><img class="project-pic box-shadow" src="img/fCC_ProductLandingPage.png" alt="freeCodeCamp Product Landing Page"></a>
+          <a href="fCC_ProductLandingPage/index.html" target="_blank"><img class="project-pic" src="img/fCC_ProductLandingPage.png" alt="freeCodeCamp Product Landing Page"></a>
           <p class="img-description">Created a mockup of a Product Landing Page for freeCodeCamp Web Develeopment course. Used plain CSS to style all form and HTML elements, used SVG's for icons, included a YouTube video with an iframe tag for the first time, applied FlexBox and CSS Grid for layout, as well as media queries for Responsiveness.</p>
+        </li>
+        <li class="row">
+          <a href="https://pong-js.netlify.com" target="_blank"><img class="project-pic" src="img/pong.png" alt="Pong"></a>
+          <p class="img-description">Built a 1 player version of the classic arcade game Pong in vanilla JavaScript during the Web Development Immersive (WDI) course at General Assembly. Wrote custom collision detection responsive to browser size and mobile devices.</p>
         </li>
 
       </ul>       <!-- Gallery -->
