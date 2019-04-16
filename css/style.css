@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,400,700,900');
+
 :root {
   /* nav background: #262626 */
   --nav-background: #2d3436;
-  --text-light: lightgrey;
+  --text-light: rgba(255, 255, 255, 1);
   --text-dark: rgb(54, 54, 54);
   --bg-about: #b2bec3;
-  --bg-about: radial-gradient(circle at top left, #b1bdc2, #70858e);
-  --bg-projects: radial-gradient(circle at top right, #636e72, #40616b) ;
+  --bg-about: radial-gradient(circle at bottom left,#313c41, #0e1e25);
+  /* --bg-projects: radial-gradient(circle at top right, #0b1b20, #40616b); */
+  --bg-projects: darkslategrey;
   --bg-contact: #2d3436;
-  --light: azure;
+  --light: rgba(255, 255, 255, 1);
   --nav-shadow: 0 0px 10px rgba(0, 0, 0, 0.6);
   --element-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.25);
   --text-shadow: 5px 5px .2rem rgba(0, 0, 0, 0.25);
@@ -17,17 +20,14 @@
 
 *, *::before, *::after {
    box-sizing: border-box;
-  }
-
-* {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  text-decoration: none;
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+   text-decoration: none;
 }
 
 body {
-  font-family: 'Montserrat', 'Open Sans', Helvetica, sans-serif;
+  font-family: 'Poppins', 'Montserrat', 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 400;
   background-color: black;
   position: relative;
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6, p, label {
 }
 
 .icon-size {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .block {
@@ -84,7 +84,6 @@ a:link, a:visited {
   font-size: 2.2rem;
   font-weight: 900;
   padding: 1rem;
-  color: rgb(250, 250, 250);
   text-align: center;
 }
 
@@ -95,7 +94,8 @@ a:link, a:visited {
   background: var(--nav-background);
   box-shadow: var(--nav-shadow);
   margin: 0 auto;
-  position: fixed;
+  position: sticky;
+  top: 0;
   text-align: center;
   width: 100%;
   z-index: 1000;
@@ -118,7 +118,7 @@ a:link, a:visited {
 }
 /* Nav Hamburger Button */
 .nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
-  background: hsl(222, 6%, 80%);
+  background: rgba(255, 255, 255, 1);
   border-radius: 3px;
   cursor: pointer;
   display: block;
@@ -208,14 +208,15 @@ nav li {
 }
 
 .hero-title {
-  font-family: 'Montserrat';
+  font-family: 'Poppins', 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
   color: white;
   font-size: 3.7rem;
   line-height: 1;
+  transition: transform 320ms ease-out;
 }
 
 .hero-subtitle {
-  font-family: 'Montserrat';
+  font-family: 'Poppins';
   font-size: 2rem;
   font-weight: 100;
   letter-spacing: -2px;
@@ -228,11 +229,12 @@ nav li {
 .about {
   text-align: center;
   background: var(--bg-about);
+  position: relative;
 }
 
 .card {
   background: #5c2b1f;
-  border-radius: 10px;
+  border-radius: 3px;
   border: 3px dashed orangered;
   width: 700px;
   padding: 2rem;
@@ -244,11 +246,10 @@ nav li {
 }
 
 .about-title, .about-subtitle {
-  color: rgba(25, 25, 25, .8);
+  color: rgba(255, 255, 255, 1);
 }
 
 .about-subtitle {
-  color: rgba(250, 250, 250, .8);
   font-size: 1rem;
   font-weight: 600;
 }
@@ -256,7 +257,7 @@ nav li {
 .profile-pic {
   margin: 3em 0;
   width: 200px;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .fa-html5 {
@@ -273,6 +274,22 @@ nav li {
 
 .fa-code {
   color: #0769ad;
+}
+
+.fa-react {
+  color: #59c0de;
+}
+
+.fa-git-square {
+  color: #f05133;
+}
+
+.fa-database {
+  color: #336791;
+}
+
+.fa-node, .fa-npm {
+  color: rgb(144,198,61);
 }
 
 i {
@@ -312,10 +329,10 @@ i:hover {
 
 .project-pic {
   width: 100%;
-  max-width: 400px;
+  max-width: 95%;
   margin: 0 auto;
   display: block;
-  border-radius: 5px;
+  border-radius: 3px;
   transition: transform 125ms ease;
 }
 
@@ -325,7 +342,7 @@ i:hover {
 
 /* Contact */
 
-#contact {
+.contact {
   background: var(--bg-contact);
 }
     /* FORM */
@@ -341,25 +358,28 @@ label {
   display: flex;
   align-self: center;
   font-size: 1rem;
-  margin: 0 auto;
+  margin: 0;
+  text-align: left;
 }
 
-#contact input, #contact textarea {
+.name-input, .email-input, .message-input, .submit-btn {
   border-radius: 5px;
   font-family: inherit;
   font-size: 1rem;
-  padding: 0.3rem;
+  color: white;
+  padding: 0.75rem;
   border: none;
   margin: 1rem .25rem;
-  vertical-align: middle;
   max-width: 100%;
-  resize: vertical;
+  resize: none;
+  background: rgba(255, 255, 255, 0.025);
+  box-shadow: 1px 5px 5px -5px rgba(0, 0, 0, 0.5);
 }
     /* Submit Button */
-#submit {
+.submit-btn {
+  color: black;
   border: none;
   border-radius: 5px;
-  color: rgba(0, 0, 0, .6);
   cursor: pointer;
   display: flex;
   margin: 1.5rem auto 0;
@@ -368,11 +388,12 @@ label {
   width: 150px;
   grid-column: span 2;
   margin: 0 auto !important;
-  transition: background-color 100ms ease;
+  transition: background-color 150ms ease-out;
+  background-color: #eee;
 }
 
-#submit:hover {
-  background-color: #eee;
+.submit-btn:hover {
+  background-color: hsl(0, 0%, 75%);
 }
 
 /* Footer */
@@ -432,7 +453,7 @@ footer h6 a:link {
     margin-bottom: 0;
   }
   .nav-item::before {
-    background: var(--light);
+    background: rgba(255, 255, 255, 1);
     content: '';
     display: block;
     height: 5px;
