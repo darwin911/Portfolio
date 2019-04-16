@@ -47,12 +47,7 @@
     <section id="hero" class="hero">
 
       <div class="titlebox">
-
-        <div>
-          <h1 class="hero-title txtctr">Web Developer</h1>
-          <h2 class="hero-subtitle txtctr">Clean &amp; Responsive</h2>
-        </div>
-
+        <h1 class="hero-title txtctr">Web Developer</h1>        </div>
       </div>
     
     </section>    <!-- /Hero -->
@@ -72,10 +67,36 @@
         </li>
         <li>
           <i class="fab fa-js-square icon-size"></i>
-          <h4 class='about-subtitle block'>JavaScript</h4></li>
+          <h4 class='about-subtitle block'>JavaScript</h4>
+        </li>
         <li>
           <i class="fas fa-code icon-size"></i>
-          <h4 class='about-subtitle block'>jQuery</h4></li>
+          <h4 class='about-subtitle block'>jQuery</h4>
+        </li>
+        <li>
+          <i class="fab fa-react icon-size"></i>
+          <h4 class='about-subtitle block'>React</h4>
+        </li>
+        <li>
+          <i class="fab fa-git-square icon-size"></i>
+          <h4 class='about-subtitle block'>Git</h4>
+        </li>
+        <li>
+          <i class="fab fa-github icon-size"></i>
+          <h4 class='about-subtitle block'>Github</h4>
+        </li>
+        <li>
+          <i class="fab fa-node icon-size"></i>
+          <h4 class='about-subtitle block'>Express</h4>
+        </li>
+        <li>
+          <i class="fas fa-database icon-size"></i>
+          <h4 class='about-subtitle block'>PostgreSQL</h4>
+        </li>
+        <li>
+          <i class="fab fa-npm icon-size"></i>
+          <h4 class='about-subtitle block'>npm</h4>
+        </li>
       </ul>
     </section>    <!-- /About -->
     
@@ -116,7 +137,15 @@
         </li>
         <li class="row">
           <a href="https://citibike-react.netlify.com" target="_blank"><img class="project-pic" src="img/citibikeStations.png" alt="Citibike Stations"></a>
-          <p class="img-description">Built on React with custom CSS with full responsiveness (Flexbox and Grid). Mapbox for the map and Google Maps Geocoding API in the search bar. Lots of love too.</p>
+          <p class="img-description">React App with custom CSS (Flexbox and Grid), using Mapbox  and Google Maps Geocoding API in the search bar. Lots of love, too.</p>
+        </li>
+        <li class="row">
+          <a href="http://luxuriant-bun.surge.sh/" target="_blank"><img class="project-pic" src="img/postpic.png" alt="PostPic"></a>
+          <p class="img-description">React App on Express (node.js) server. This project was built with the intention to mimic websites/apps such as Instagram.</p>
+        </li>
+        <li class="row">
+          <a href="https://octave-bananas.surge.sh" target="_blank"><img class="project-pic" src="img/octave.png" alt="Octave"></a>
+          <p class="img-description">React App built on Express (node.js) server pulling data from Ticketmaster API. Built in collaboration with UI/UX design students at General Assembly.</p>
         </li>
 
       </ul>       <!-- Gallery -->
@@ -129,15 +158,15 @@
       <form action="https://formspree.io/darwinpsmith@gmail.com" method="POST">
         
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="John Doe" required>
+        <input type="text" id="name" class="name-input" name="name" placeholder="John Doe" required>
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="_replyto" placeholder="name@email.com" required>
+        <input type="email" id="email" class="email-input"name="_replyto" placeholder="name@email.com" required>
         
         <label for="message">Message:</label>
-        <textarea name="message" id="message" placeholder="Type your message here" spellcheck="true" required></textarea>
+        <textarea name="message" id="message" class="message-input" placeholder="Type your message here" spellcheck="true" required></textarea>
 
-        <input id="submit" class="box-shadow" type="submit" name="submit" value="Submit">
+        <input  type="submit" id="submit" class="submit-btn" name="submit" value="Submit">
 
       </form>
                           
