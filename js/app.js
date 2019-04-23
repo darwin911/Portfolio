@@ -6,3 +6,9 @@ $(document).ready(function () {
     });
 
 });
+
+// console.log(navigator.userAgent.indexOf('Android') !== -1)
+
+// if (navigator.userAgent.indexOf('Android') !== -1) {
+//     return document.documentElement.requestFullscreen();
+// } 
