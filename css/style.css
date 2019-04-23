@@ -181,9 +181,8 @@ nav li {
 
 .hero {
   height: 100vh;
-  /* background: center / cover no-repeat url("../img/city_skyline_web.jpeg"); */
-  /* background: radial-gradient(circle at bottom left, rgba(25, 25, 25, 1), rgba(255, 255, 255, 0.2)); */
   background: center / cover no-repeat url("https://images.pexels.com/photos/2120040/pexels-photo-2120040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  position: relative;
 }
 
 .titlebox {
@@ -197,10 +196,12 @@ nav li {
 
 .hero-title {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  color: white;
+  color: rgba(255, 255, 255, 1);
   font-size: 3.7rem;
   font-weight: 100;
   line-height: 1;
+  position: relative;
+  top: -8%;
   transition: transform 320ms ease-out;
 }
 
@@ -214,10 +215,15 @@ nav li {
 }
 
 .hero-subtitle {
-  font-family: 'Poppins';
-  font-size: 2rem;
-  font-weight: 100;
-  letter-spacing: -2px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 1.5;
+  font-size: 1rem;
+  font-weight: 200;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 800px;
+  position: absolute;
+  bottom: 10%;
 }
 
 /* /Hero Section */
@@ -241,8 +247,10 @@ nav li {
 }
 
 .about ul {
-  max-width: 800px;
+  max-width: 750px;
   margin: 0 auto;
+  z-index: 2;
+  position: relative;
 }
 
 .about ul li {
@@ -259,7 +267,7 @@ nav li {
 }
 
 .profile-pic {
-  margin: 3em 0;
+  margin: 1.25rem 0;
   width: 200px;
   border-radius: 50%;
   /* padding: 0.25rem; */
@@ -298,12 +306,21 @@ nav li {
   color: rgb(144,198,61);
 }
 
+.ruby {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  margin: 0 auto 1rem;
+  background: center / cover no-repeat url('../img/ruby.png');
+}
+
 i {
   margin-bottom: .75rem;
   transition: transform 100ms ease-out;
+  user-select: none;
 }
 
-i:hover {
+.about ul li:hover i {
   transform: translateY(-5px);
 }
 
@@ -319,7 +336,7 @@ i:hover {
 }
 
 .projects h2, .projects p {
-  color: white;
+  color: rgba(255, 255, 255, 1);
 }
 
 .row {
@@ -340,8 +357,8 @@ i:hover {
 }
 
 .project-pic {
-  width: 100%;
-  max-width: 95%;
+  width: 95%;
+  max-width: 500px;
   margin: 0 auto;
   display: block;
   border-radius: 3px;
@@ -360,10 +377,11 @@ i:hover {
 }
 
 .contact h2, .contact label {
-  color: white;
+  color: rgba(255, 255, 255, 1);
 }
     /* FORM */
 form {
+  max-width: 90%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -382,11 +400,12 @@ label {
   border-radius: 5px;
   font-family: inherit;
   font-size: 1rem;
-  color: white;
+  color: rgba(0, 0, 0, 1);
   padding: 0.75rem;
   border: none;
-  margin: 1rem .25rem;
-  max-width: 100%;
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 400px;
   resize: none;
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 1px 5px 5px -5px rgba(0, 0, 0, 0.5);
@@ -422,7 +441,7 @@ footer {
 }
 
 footer p, footer h6 {
-  color: white;
+  color: rgba(255, 255, 255, 1);
   font-size: .7rem;
   padding: 1rem 0;
 }
@@ -471,9 +490,10 @@ footer h6 a:link {
   }
   .nav-item::before {
     background: var(--text-dark);
+    background: slateblue;
     content: '';
     display: block;
-    height: 2px;
+    height: 3px;
     position: absolute;
     top: -.5rem;
     left: 0;
@@ -489,6 +509,49 @@ footer h6 a:link {
 
   .hero-title {
     font-size: 6rem;
+    position: static;
+  }
+
+  .hero-subtitle {
+    width: 80%;
+    line-height: 2;
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 150ms ease;
+    margin: 0 2rem 0 auto;
+    max-width: 100%;
+  }
+
+  .hero-subtitle:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .about {
+    position: relative;
+  }
+
+  .about::before {
+    content: '';
+    background: radial-gradient(circle at top left, slateblue, rgb(53, 35, 170));
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    width: 500px;
+    height: 200px;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+
+  .about::after {
+    content: '';
+    background: radial-gradient(circle at top left, rgb(53, 35, 170), slateblue);
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    width: 500px;
+    height: 200px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
   }
 
   .project-pic {
@@ -512,6 +575,6 @@ footer h6 a:link {
   }
 
   form {
-    max-width: 300px;
+    max-width: 600px;
   }
 }
