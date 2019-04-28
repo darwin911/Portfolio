@@ -37,8 +37,11 @@
     <section id="hero" class="hero">
 
       <div class="titlebox">
-        <h1 class="hero-title">Web<br /> <span>Developer</span></h1>
-        <p class="hero-subtitle">My analytical skills and authenticity along with my experience in the Legal, and Service & Hospitality industries has helped me prioritize, organize my workspace and set clear goals for projects. My determination and attention to detail on any given project, are valuable assets to any team.</p>
+        <div class="hero-text-container">
+          <h1 class="hero-title">Web</h1>
+          <h1 class="hero-title developer">Developer</h1>
+        </div>
+        <p class="hero-subtitle">My analytical skills and authenticity along with my experience in the Legal, and Service & Hospitality industries has helped me prioritize, organize my workspace and set clear goals for projects.</p>
       </div>
     
     </section>    <!-- /Hero -->
@@ -46,7 +49,7 @@
                   <!-- About -->
     <section id="about" class="about">
       <img id="profile-pic" class="profile-pic" src="img/profile-lowres.jpg" alt="headshot of Darwin Smith">
-      <h2 class="section-title">Technologies</h2>
+      <h2 class="section-title">Skills &amp; Tools</h2>
       <ul>
         <li>
           <i class="fab fa-html5 icon-size"></i>
@@ -77,8 +80,12 @@
           <h4 class='about-subtitle block'>Github</h4>
         </li>
         <li>
-          <i class="fab fa-node icon-size"></i>
-          <h4 class='about-subtitle block'>Express</h4>
+          <i class="slack icon-size"></i>
+          <h4 class='about-subtitle block'>Slack</h4>
+        </li>
+        <li>
+          <i class="fab express icon-size"></i>
+          <h4 class='about-subtitle block'>Express.js</h4>
         </li>
         <li>
           <i class="fas fa-database icon-size"></i>
@@ -86,11 +93,19 @@
         </li>
         <li>
           <i class="fab fa-npm icon-size"></i>
-          <h4 class='about-subtitle block'>npm</h4>
+          <h4 class='about-subtitle block'>NPM</h4>
         </li>
         <li>
           <i class="ruby icon-size"></i>
           <h4 class='about-subtitle block'>Ruby</h4>
+        </li>
+        <li>
+          <i class="aws icon-size"></i>
+          <h4 class='about-subtitle block'>AWS</h4>
+        </li>
+        <li>
+          <i class="fab fa-node icon-size"></i>
+          <h4 class='about-subtitle block'>Node.js</h4>
         </li>
       </ul>
     </section>    <!-- /About -->
@@ -103,28 +118,71 @@
       <ul class="gallery container">
         
         <li class="row">
-          <a href="https://vinyl.surge.sh" target="_blank"><img class="project-pic" src="img/vinyl.png" alt="Vinyl"></a>
+          <header>
+            <img class="project-pic" src="img/vinyl.png" alt="Vinyl" />
+            <div class="project-links">
+                <a class="live-site" href="https://vinyl.surge.sh" target="_blank">Live Site</a>
+                <a href="https://github.com/darwin911/vinyl-express" target="_blank">
+                  <i class="fab fa-github project-icon-github"></i>
+                </a>
+            </div>  
+          </header>
+
           <p class="img-description">Vinyl was built with on an Express server with a React front-end with CRUD (Create, Read, Update and Delete). All UI Controls were custom made and controlled with state. Tracks are uploaded through my express server to an AWS S3 Bucket.</p>
+
         </li>
 
         <li class="row">
-          <a href="https://octave-bananas.surge.sh" target="_blank"><img class="project-pic" src="img/octave.png" alt="Octave"></a>
-          <p class="img-description">React App built on Express (node.js) server pulling data from Ticketmaster API. Built in collaboration with UI/UX design students at General Assembly.</p>
+          <header>
+            <img class="project-pic" src="img/octave.png" alt="Octave">
+            <div class="project-links">
+              <a class="live-site" href="https://octave-bananas.surge.sh" target="_blank">Live Site</a>
+              <a href="https://github.com/darwin911/octave" target="_blank">
+                <i class="fab fa-github icon-size project-icon-github"></i>
+              </a>
+            </div>
+          </header>
+
+          <p class="img-description">A collaborative React App built with Express on Node.js and accessing data from the Ticketmaster API. Design based off a mock-up from a UI/UX design team of students at General Assembly.</p>
         </li>
 
         <li class="row">
-          <a href="https://pong-js.netlify.com" target="_blank"><img class="project-pic" src="img/pong.png" alt="Pong"></a>
-          <p class="img-description">Built a 1 player version of the classic arcade game Pong in vanilla JavaScript during the Web Development Immersive (WDI) course at General Assembly. Wrote custom collision detection responsive to browser size and mobile devices.</p>
+          <header>
+            <img class="project-pic" src="img/pong.png" alt="Pong">
+            <div class="project-links">
+              <a class="live-site" href="https://pong-js.netlify.com" target="_blank" class="live-site">Live Site</a>
+              <a href="https://github.com/darwin911/pong" target="_blank"><i class="fab fa-github icon-size project-icon-github"></i></a>
+            </div>
+          </header>
+          <p class="img-description">Built a one player version of the classic arcade game Pong in vanilla JavaScript during the Web Development Immersive (WDI) course at General Assembly. Wrote custom collision detection responsive to browser size and mobile devices.</p>
         </li>
 
         <li class="row">
-          <a href="https://citibike-react.netlify.com" target="_blank"><img class="project-pic" src="img/citibikeStations.png" alt="Citibike Stations"></a>
-          <p class="img-description">React App with custom CSS (Flexbox and Grid), using Mapbox  and Google Maps Geocoding API in the search bar. Lots of love, too.</p>
+          <header>
+            <img class="project-pic" src="img/citibikeStations.png" alt="Citibike Stations">
+
+            <div class="project-links">
+              <a class="live-site" href="https://citibike-react.netlify.com" target="_blank" >Live Site</a>
+              <a href="https://github.com/darwin911/citibike-react" target="_blank"><i class="fab fa-github icon-size project-icon-github"></i></a>
+            </div>
+          </header>
+          
+          <p class="img-description">React App with custom CSS (Flexbox and Grid), using Mapbox and Google Maps Geocoding API powered inputs. Lots of love, too.</p>
         </li>
 
         <li class="row">
-          <a href="http://luxuriant-bun.surge.sh/" target="_blank"><img class="project-pic" src="img/postpic.png" alt="PostPic"></a>
-          <p class="img-description">React App on Express (node.js) server. This project was built with the intention to mimic websites/apps such as Instagram.</p>
+          <header>
+            <img class="project-pic" src="img/postpic.png" alt="PostPic">
+            
+            <div class="project-links">
+              <a class="live-site" href="http://luxuriant-bun.surge.sh/" target="_blank">Live Site</a>
+              <a href="https://github.com/darwin911/imageSharingCRUD" target="_blank">
+                <i class="fab fa-github icon-size project-icon-github"></i>
+              </a>
+            </div>
+          </header>
+
+          <p class="img-description">React App on Express (node.js) server. This project was built to mimic web-apps/apps such as Instagram.</p>
         </li>
 
         <li class="row">
@@ -170,6 +228,11 @@
         <input  type="submit" id="submit" class="submit-btn" name="submit" value="Submit">
 
       </form>
+
+      <div class="email">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:darwinpsmith@gmail.com">darwinpsmith@gmail.com</a>
+      </div>
                           
     </section>    <!-- Contact -->
   

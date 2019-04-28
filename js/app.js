@@ -2,13 +2,19 @@ $(document).ready(function () {
     // Scroll the whole document
     $.localScroll({
         target: 'body',
-        duration: 200
+        duration: 200,
+        offset: -72
     });
-
 });
+const web =  document.querySelector('.hero-title');
+const words = ["Web", "Full Stack", "Front-End"]
 
-// console.log(navigator.userAgent.indexOf('Android') !== -1)
+const changeText = () => {
+    console.log('changeText')
+    for (let i = 0; i < words.length; i++) {
+        web.textContent = words[Math.floor(Math.random() * 3)];
+        return;
+    }
+}
 
-// if (navigator.userAgent.indexOf('Android') !== -1) {
-//     return document.documentElement.requestFullscreen();
-// } 
+document.querySelector('.hero-text-container').addEventListener('mouseover', changeText);
