@@ -218,6 +218,7 @@ nav li {
   position: relative;
   top: -0.75rem;
   transition: color 200ms ease-out;
+  animation: slide-in 1500ms ease-in-out 1;
 }
 
 .hero-title:hover .developer {
@@ -576,10 +577,6 @@ footer h6 a:link {
 
   .hero-title {
     font-size: 6rem;
-  }
-
-  .developer {
-    animation: slide-in 1500ms ease-in-out 1;
   }
 
   .hero-subtitle {
