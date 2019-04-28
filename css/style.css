@@ -668,8 +668,8 @@ footer h6 a:link {
     bottom: 0;
     transition: opacity 300ms ease;
   }
-  
-  .project-links:hover {
+
+  .gallery header:hover .project-links {
     background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, .85));
     opacity: 1;
   }
