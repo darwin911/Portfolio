@@ -542,14 +542,16 @@ footer p, footer h6 {
   color: white;
   font-size: .7rem;
   padding: 1rem 0;
+  -webkit-transition: color 250ms ease;
+  transition: color 250ms ease;
 }
 
-footer:hover, footer h6 a:hover {
-  color: #eee;
+footer p:hover, footer h6:hover {
+  color: #ccc;
 }
 
 footer h6 a:link {
-  color: #9E9E9E;
+  color: white;
 }
 
 @media screen and (min-width: 375px) {
@@ -562,16 +564,13 @@ footer h6 a:link {
   .about ul li {
     display: inline-block;
   }
-  .nav-toggle-label {
-    display: none;
-  }
   .nav-header {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr auto minmax(600px, 3fr) 1fr;
         grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
-  .logo {
+  .nav-header .logo {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2 / span 1;
@@ -579,7 +578,7 @@ footer h6 a:link {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .nav-menu {
+  .nav-header .nav-menu {
     all: unset;
     -ms-grid-column: 3;
     -ms-grid-column-span: 1;
@@ -594,11 +593,7 @@ footer h6 a:link {
         -ms-flex-align: center;
             align-items: center;
   }
-  .nav-item {
-    opacity: 1;
-    position: relative;
-  }
-  .nav-menu ul {
+  .nav-header .nav-menu ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -606,11 +601,15 @@ footer h6 a:link {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .nav-menu li {
+  .nav-header .nav-menu ul li {
     margin-left: 3em;
     margin-bottom: 0;
   }
-  .nav-item::before {
+  .nav-header .nav-menu .nav-item {
+    opacity: 1;
+    position: relative;
+  }
+  .nav-header .nav-menu .nav-item::before {
     background: #363636;
     background: #3523aa;
     content: '';
@@ -628,10 +627,13 @@ footer h6 a:link {
     transition: transform ease-in-out 150ms, opacity ease-in-out 150ms;
     transition: transform ease-in-out 150ms, opacity ease-in-out 150ms, -webkit-transform ease-in-out 150ms;
   }
-  .nav-item:hover::before {
+  .nav-header .nav-menu .nav-item:hover::before {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
     opacity: 1;
+  }
+  .nav-header .nav-toggle-label {
+    display: none;
   }
   .hero-title {
     font-size: 6rem;
@@ -651,9 +653,6 @@ footer h6 a:link {
   }
   .about {
     position: relative;
-  }
-  .icon-size {
-    font-size: 4rem;
   }
   .about::before {
     content: '';
@@ -676,6 +675,9 @@ footer h6 a:link {
     right: 0;
     bottom: 0;
     position: absolute;
+  }
+  .icon-size {
+    font-size: 4rem;
   }
   .project-pic {
     width: 100%;
@@ -711,6 +713,15 @@ footer h6 a:link {
     -webkit-transition: opacity 300ms ease;
     transition: opacity 300ms ease;
   }
+  .project-links .project-icon-github {
+    color: white;
+    font-size: 3rem;
+    -webkit-transition: 250ms ease;
+    transition: 250ms ease;
+  }
+  .project-links .project-icon-github:hover {
+    color: #ddd;
+  }
   .gallery header:hover .project-links {
     background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.85)));
     background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.85));
@@ -726,18 +737,9 @@ footer h6 a:link {
     font-weight: 300;
     letter-spacing: 1px;
   }
-  .project-icon-github {
-    color: white;
-    font-size: 3rem;
-    -webkit-transition: 250ms ease;
-    transition: 250ms ease;
-  }
   .live-site:hover {
     background: #222;
     color: white;
-  }
-  .project-icon-github:hover {
-    color: #ddd;
   }
   form {
     max-width: 600px;
