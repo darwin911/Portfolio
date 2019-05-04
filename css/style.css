@@ -693,7 +693,7 @@ footer h6 a:link {
     -webkit-transition: color 150ms ease;
     transition: color 150ms ease;
     margin: 0 2rem 0 auto;
-    max-width: 100%;
+    max-width: 85%;
   }
   .hero-subtitle:hover {
     color: white;
