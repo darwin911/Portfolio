@@ -15,7 +15,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p, label {
-  color: #363636;
+  color: black;
 }
 
 .icon-size {
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6, p, label {
 }
 
 a:link, a:visited {
-  color: #363636;
+  color: black;
 }
 
 .about, .projects, .contact {
@@ -50,7 +50,7 @@ a:link, a:visited {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #f6f6f6;
+  background: rgba(246, 246, 246, 0);
   margin: 0 auto;
   position: fixed;
   top: 0;
@@ -58,10 +58,12 @@ a:link, a:visited {
   width: 100%;
   z-index: 1000;
   height: 4.5rem;
-  -webkit-box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.25);
-  -webkit-transition: background 250ms ease;
-  transition: background 250ms ease;
+  -webkit-transition: background 225ms ease;
+  transition: background 225ms ease;
+}
+
+.nav-header a {
+  color: white;
 }
 
 .nav-toggle {
@@ -84,14 +86,24 @@ a:link, a:visited {
 }
 
 /* Nav Hamburger Button */
-.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
-  background: #363636;
+.nav-toggle-label span {
+  background: white;
   border-radius: 3px;
   cursor: pointer;
   display: block;
   height: 2px;
   position: relative;
-  width: 2em;
+  width: 2rem;
+}
+
+.nav-toggle-label span::after, .nav-toggle-label span::before {
+  background: inherit;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 2rem;
 }
 
 .nav-toggle-label span::before, .nav-toggle-label span::after {
@@ -108,7 +120,7 @@ a:link, a:visited {
 }
 
 .nav-menu {
-  background: #f6f6f6;
+  background: inherit;
   text-align: left;
   padding-top: .5em;
   position: absolute;
@@ -199,14 +211,35 @@ a:link, a:visited {
   font-weight: 100;
   text-align: left;
   line-height: 1;
-  -webkit-transition: opacity 500ms ease, -webkit-transform 990ms ease-out;
-  transition: opacity 500ms ease, -webkit-transform 990ms ease-out;
-  transition: transform 990ms ease-out, opacity 500ms ease;
-  transition: transform 990ms ease-out, opacity 500ms ease, -webkit-transform 990ms ease-out;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.hero-title:nth-child(1) {
+  -webkit-animation: fadeinout 4000ms linear 2000ms infinite;
+          animation: fadeinout 4000ms linear 2000ms infinite;
+}
+
+@-webkit-keyframes fadeinout {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeinout {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .developer {
@@ -216,11 +249,8 @@ a:link, a:visited {
   font-weight: 300;
   margin-left: 2rem;
   position: relative;
-  top: -0.75rem;
   -webkit-transition: color 200ms ease-out;
   transition: color 200ms ease-out;
-  -webkit-animation: slide-in 1500ms ease-in-out 1;
-          animation: slide-in 1500ms ease-in-out 1;
 }
 
 .hero-title:hover .developer {
@@ -261,8 +291,12 @@ a:link, a:visited {
   margin: .75rem 2rem;
 }
 
+.about ul li h4 {
+  font-weight: 400;
+}
+
 .about-title, .about-subtitle {
-  color: #363636;
+  color: black;
 }
 
 .about-subtitle {
@@ -621,7 +655,7 @@ footer h6 a:link {
     position: relative;
   }
   .nav-header .nav-menu .nav-item::before {
-    background: #363636;
+    background: black;
     background: #3523aa;
     content: '';
     display: block;
@@ -650,9 +684,11 @@ footer h6 a:link {
     font-size: 6rem;
   }
   .hero-subtitle {
-    width: 80%;
-    line-height: 2;
+    width: 1000px;
+    text-align: left;
+    line-height: 1.75;
     font-size: 1.25rem;
+    font-weight: 300;
     color: rgba(255, 255, 255, 0.8);
     -webkit-transition: color 150ms ease;
     transition: color 150ms ease;

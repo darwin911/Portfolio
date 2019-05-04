@@ -1,7 +1,7 @@
 $white: rgba(255, 255, 255, 1);
-$navBackground: rgb(246, 246, 246);
+$navBackground: rgba(246, 246, 246, 0);
 $textLight: rgb(54, 54, 54);
-$textDark: rgb(54, 54, 54);
+$textDark: rgb(0, 0, 0);
 $bgAbout: rgb(238, 238, 238);
 $bgProjects: radial-gradient(circle, rgba(54,53,53,1) 0%, rgba(27,27,27,1) 100%);
 $bgContact: rgb(45, 52, 54);
@@ -63,8 +63,11 @@ a:link, a:visited {
   width: 100%;
   z-index: 1000;
   height: 4.5rem;
-  box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.25);
-  transition: background 250ms ease;
+  // box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.25);
+  transition: background 225ms ease;
+  a {
+    color: $white;
+  }
 }
 
 .nav-toggle {
@@ -82,14 +85,24 @@ a:link, a:visited {
   left: 0;
 }
 /* Nav Hamburger Button */
-.nav-toggle-label span, .nav-toggle-label span::before, .nav-toggle-label span::after {
-  background: $textDark;
+.nav-toggle-label span {
+  background: $white;
   border-radius: 3px;
   cursor: pointer;
   display: block;
   height: 2px;
   position: relative;
-  width: 2em;
+  width: 2rem;
+
+  &::after, &::before {
+    background: inherit;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 2rem;
+  }
 }
 
 .nav-toggle-label span::before, .nav-toggle-label span::after {
@@ -106,7 +119,7 @@ a:link, a:visited {
 }
 
 .nav-menu {
-  background: $navBackground;
+  background: inherit;
   text-align: left;
   padding-top: .5em;
   position: absolute;
@@ -179,8 +192,21 @@ a:link, a:visited {
   font-weight: 100;
   text-align: left;
   line-height: 1;
-  transition: transform 990ms ease-out, opacity 500ms ease;
+  transition: 500ms ease;
   user-select: none;
+}
+
+.hero-title:nth-child(1) {
+  animation: fadeinout 4000ms linear 2000ms infinite;
+}
+
+@keyframes fadeinout {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .developer {
@@ -190,9 +216,8 @@ a:link, a:visited {
   font-weight: 300;
   margin-left: 2rem;
   position: relative;
-  top: -0.75rem;
   transition: color 200ms ease-out;
-  animation: slide-in 1500ms ease-in-out 1;
+  // animation: slide-in 1500ms ease-in-out 1;
 }
 
 .hero-title:hover .developer {
@@ -219,17 +244,21 @@ a:link, a:visited {
   text-align: center;
   background: $bgAbout;
   position: relative;
-}
 
-.about ul {
-  max-width: 750px;
-  margin: 0 auto;
-  z-index: 2;
-  position: relative;
-}
+  ul {
+    max-width: 750px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
 
-.about ul li {
-  margin: .75rem 2rem;
+    li {
+      margin: .75rem 2rem;
+
+      h4 {
+        font-weight: 400;
+      }
+    }
+  }
 }
 
 .about-title, .about-subtitle {
@@ -567,9 +596,11 @@ footer {
   }
 
   .hero-subtitle {
-    width: 80%;
-    line-height: 2;
+    width: 1000px;
+    text-align: left;
+    line-height: 1.75;
     font-size: 1.25rem;
+    font-weight: 300;
     color: rgba(255, 255, 255, 0.8);
     transition: color 150ms ease;
     margin: 0 2rem 0 auto;
