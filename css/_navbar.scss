@@ -1,0 +1,107 @@
+/* Navigation */
+.nav-header {
+  display: flex;
+  justify-content: center;
+  background: $navBackground;
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+  height: 4.5rem;
+  // box-shadow: 0px 1px 9px 0px rgba(0, 0, 0, 0.25);
+  transition: background 225ms ease;
+  a {
+    color: $white;
+  }
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* Nav Hamburger Button */
+.nav-toggle-label span {
+  background: $white;
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 2rem;
+
+  &::after, &::before {
+    background: inherit;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 2rem;
+  }
+}
+
+.nav-toggle-label span::before, .nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+.nav-menu {
+  background: inherit;
+  text-align: left;
+  padding-top: .5em;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: scale(1, 0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: top;
+  width: 100%;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: 200;
+  padding: .5em 1em;
+  text-align: center;
+  align-self: center;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav .nav-item {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 200ms;
+}

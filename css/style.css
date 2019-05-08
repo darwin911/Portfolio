@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900");
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8,7 +9,7 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 400;
   background-color: black;
   position: relative;
@@ -37,7 +38,7 @@ a:link, a:visited {
 
 .section-title {
   font-size: 2.2rem;
-  font-weight: 300;
+  font-weight: 100;
   padding: 1rem;
   text-align: center;
 }
@@ -197,7 +198,6 @@ a:link, a:visited {
 
 .hero-text-container {
   position: relative;
-  top: -10vh;
 }
 
 .hero-text-container:hover .developer {
@@ -205,7 +205,7 @@ a:link, a:visited {
 }
 
 .hero-title {
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
   color: white;
   font-size: 3.7rem;
   font-weight: 100;
@@ -243,10 +243,10 @@ a:link, a:visited {
 }
 
 .developer {
-  color: #bbb;
+  color: #ddd;
   display: block;
   letter-spacing: 0px;
-  font-weight: 300;
+  font-weight: 100;
   margin-left: 2rem;
   position: relative;
   -webkit-transition: color 200ms ease-out;
@@ -256,19 +256,6 @@ a:link, a:visited {
 .hero-title:hover .developer {
   -webkit-transform: translateX(-1rem);
           transform: translateX(-1rem);
-}
-
-.hero-subtitle {
-  color: white;
-  line-height: 1.5;
-  font-size: 1rem;
-  font-weight: 200;
-  margin: 0 auto;
-  width: 90%;
-  max-width: 500px;
-  position: absolute;
-  bottom: 10vh;
-  text-align: center;
 }
 
 /* /Hero Section */
@@ -281,7 +268,8 @@ a:link, a:visited {
 }
 
 .about ul {
-  max-width: 750px;
+  max-width: 100%;
+  width: 800px;
   margin: 0 auto;
   z-index: 2;
   position: relative;
@@ -289,6 +277,12 @@ a:link, a:visited {
 
 .about ul li {
   margin: .75rem 2rem;
+  -webkit-transition: text-shadow 150ms ease;
+  transition: text-shadow 150ms ease;
+}
+
+.about ul li:hover {
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .about ul li h4 {
@@ -300,15 +294,41 @@ a:link, a:visited {
 }
 
 .about-subtitle {
+  color: black;
+  line-height: 1.5;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
+  margin: 0 auto 1rem;
+  width: 90%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-subtitle span {
+  font-weight: 600;
+}
+
+.about-subtitle:nth-child(3) {
+  font-weight: 100;
+  margin-bottom: 2.5rem;
 }
 
 .profile-pic {
-  margin: 1.25rem 0;
+  margin: 1.5rem 0 2.5rem;
   width: 200px;
   border-radius: 50%;
-  border: 4px rgba(0, 0, 0, 0.45) solid;
+  border: 4px solid;
+  border-color: rgba(0, 0, 0, 0.45);
+  -webkit-transition: border-color 200ms ease-in-out;
+  transition: border-color 200ms ease-in-out;
+}
+
+.profile-pic:hover {
+  border-color: #3523aa;
+}
+
+.profile-pic:hover ~ ul li h4 {
+  opacity: 1;
 }
 
 .fa-html5 {
@@ -317,10 +337,6 @@ a:link, a:visited {
 
 .fa-css3-alt {
   color: #0074D9;
-}
-
-.fa-js-square {
-  color: #f7df1e;
 }
 
 .fa-code {
@@ -335,15 +351,14 @@ a:link, a:visited {
   color: #f05133;
 }
 
-.fa-database {
-  color: #336791;
-}
-
-.express {
+.javascript, .express, .ruby, .postgresql, .aws, .slack, .jquery, .npm, .git {
   width: 4rem;
   height: 4rem;
   display: block;
   margin: 0 auto 1rem;
+}
+
+.javascript, .express, .ruby, .postgresql, .aws, .slack, .jquery, .npm, .aws, .git {
   background: center/contain no-repeat url("../img/express.svg");
 }
 
@@ -351,28 +366,37 @@ a:link, a:visited {
   color: #90c63d;
 }
 
+.javascript {
+  background: center/cover no-repeat url("https://cdn.svgporn.com/logos/javascript.svg");
+  border-radius: 10px;
+}
+
+.npm {
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/npm.svg");
+}
+
+.postgresql {
+  background: center/cover no-repeat url("https://cdn.svgporn.com/logos/postgresql.svg");
+}
+
 .ruby {
-  width: 4rem;
-  height: 4rem;
-  display: block;
-  margin: 0 auto 1rem;
-  background: center/cover no-repeat url("../img/ruby.png");
+  background: center/cover no-repeat url("../img/ruby.svg");
 }
 
 .aws {
-  width: 4rem;
-  height: 4rem;
-  display: block;
-  margin: 0 auto 1rem;
   background: center/contain no-repeat url("../img/aws.svg");
 }
 
+.git {
+  background: center/cover no-repeat url("https://cdn.svgporn.com/logos/git-icon.svg");
+}
+
 .slack {
-  width: 4rem;
-  height: 4rem;
-  display: block;
-  margin: 0 auto 1rem;
-  background: center/contain no-repeat url("../img/slack.svg");
+  background: center/contain no-repeat url("https://cdn.svgporn.com/logos/slack-icon.svg");
+}
+
+.jquery {
+  background: center/contain no-repeat url("../img/jquery.svg");
 }
 
 i {
@@ -615,6 +639,12 @@ footer h6 a:link {
     -ms-grid-columns: 1fr auto minmax(600px, 3fr) 1fr;
         grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
+  .nav-header:hover {
+    background: rgba(255, 255, 255, 0.96) !important;
+  }
+  .nav-header:hover .logo, .nav-header:hover .nav-item a {
+    color: black !important;
+  }
   .nav-header .logo {
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
@@ -703,25 +733,38 @@ footer h6 a:link {
   }
   .about::before {
     content: '';
-    background: radial-gradient(circle at top left, #3523aa, rgba(53, 35, 170, 0.7));
-    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
-    clip-path: polygon(0 0, 0% 100%, 100% 0);
-    width: 500px;
-    height: 200px;
+    background: black radial-gradient(circle at bottom right, #3523aa, rgba(53, 35, 170, 0.7));
+    -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+    width: 70vw;
+    height: 125px;
     left: 0;
     top: 0;
     position: absolute;
   }
   .about::after {
     content: '';
-    background: radial-gradient(circle at bottom right, #3523aa, rgba(53, 35, 170, 0.7));
+    background: black radial-gradient(circle at bottom right, #3523aa, rgba(53, 35, 170, 0.7));
     -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    width: 500px;
-    height: 200px;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    width: 70vw;
+    height: 125px;
     right: 0;
     bottom: 0;
     position: absolute;
+  }
+  .about ul {
+    margin-bottom: 7rem;
+    width: 1400px;
+    max-width: 80%;
+  }
+  .about ul li h4 {
+    opacity: 0.25;
+    -webkit-transition: opacity 250ms ease;
+    transition: opacity 250ms ease;
+  }
+  .about ul li:hover h4 {
+    opacity: 1;
   }
   .icon-size {
     font-size: 4rem;
@@ -781,7 +824,7 @@ footer h6 a:link {
     display: inline-block;
     -webkit-transition: 150ms ease;
     transition: 150ms ease;
-    font-weight: 300;
+    font-weight: 100;
     letter-spacing: 1px;
   }
   .live-site:hover {
