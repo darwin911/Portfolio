@@ -759,7 +759,7 @@ footer h6 a:link {
     max-width: 80%;
   }
   .about ul li h4 {
-    opacity: 0.25;
+    opacity: 0.5;
     -webkit-transition: opacity 250ms ease;
     transition: opacity 250ms ease;
   }
