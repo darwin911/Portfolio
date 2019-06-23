@@ -42,6 +42,7 @@ setInterval(changeText, 4000);
 window.addEventListener("scroll", changeNavBg);
 
 const projects = document.querySelectorAll(".row");
+const icons = document.querySelectorAll(".icon-size");
 
 const observerOptions = {
   root: null,
@@ -61,14 +62,19 @@ const projectsObserver = new IntersectionObserver(
   observerOptions
 );
 
-const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      console.log("Intersecting");
-      entry.target.classList.add("in-view");
-    }
-  });
-}, observerOptions);
+const sectionObserver = new IntersectionObserver(
+  (entries, sectionObserver) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // console.log("Intersecting");
+        entry.target.classList.add("in-view");
+      }
+    });
+  },
+  {
+    threshold: 0.1
+  }
+);
 
 const aboutSection = document.querySelector(".about");
 
@@ -76,4 +82,8 @@ sectionObserver.observe(aboutSection);
 
 projects.forEach(project => {
   projectsObserver.observe(project);
+});
+
+icons.forEach(icon => {
+  projectsObserver.observe(icon);
 });

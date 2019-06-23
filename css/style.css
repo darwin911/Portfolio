@@ -461,7 +461,7 @@ i {
 }
 
 .row,
-.about {
+.icon-size {
   opacity: 0;
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
@@ -472,7 +472,7 @@ i {
 }
 
 .row.in-view,
-.about.in-view {
+.icon-size.in-view {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
