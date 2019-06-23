@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900");
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -9,13 +11,20 @@
 }
 
 body {
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 400;
-  background-color: black;
+  background-color: #333333;
   position: relative;
 }
 
-h1, h2, h3, h4, h5, h6, p, label {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
   color: black;
 }
 
@@ -28,11 +37,14 @@ h1, h2, h3, h4, h5, h6, p, label {
   max-width: 1000px;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   color: black;
 }
 
-.about, .projects, .contact {
+.about,
+.projects,
+.contact {
   padding: 3.5rem 0;
 }
 
@@ -276,7 +288,7 @@ a:link, a:visited {
 }
 
 .about ul li {
-  margin: .75rem 2rem;
+  margin: 0.75rem 2rem;
   -webkit-transition: text-shadow 150ms ease;
   transition: text-shadow 150ms ease;
 }
@@ -289,7 +301,8 @@ a:link, a:visited {
   font-weight: 400;
 }
 
-.about-title, .about-subtitle {
+.about-title,
+.about-subtitle {
   color: black;
 }
 
@@ -336,7 +349,7 @@ a:link, a:visited {
 }
 
 .fa-css3-alt {
-  color: #0074D9;
+  color: #0074d9;
 }
 
 .fa-code {
@@ -351,18 +364,36 @@ a:link, a:visited {
   color: #f05133;
 }
 
-.javascript, .express, .ruby, .postgresql, .aws, .slack, .jquery, .npm, .git {
+.javascript,
+.express,
+.ruby,
+.postgresql,
+.aws,
+.slack,
+.jquery,
+.npm,
+.git {
   width: 4rem;
   height: 4rem;
   display: block;
   margin: 0 auto 1rem;
 }
 
-.javascript, .express, .ruby, .postgresql, .aws, .slack, .jquery, .npm, .aws, .git {
+.javascript,
+.express,
+.ruby,
+.postgresql,
+.aws,
+.slack,
+.jquery,
+.npm,
+.aws,
+.git {
   background: center/contain no-repeat url("../img/express.svg");
 }
 
-.fa-node, .fa-npm {
+.fa-node,
+.fa-npm {
   color: #90c63d;
 }
 
@@ -400,7 +431,7 @@ a:link, a:visited {
 }
 
 i {
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
   -webkit-transition: -webkit-transform 100ms ease-out;
   transition: -webkit-transform 100ms ease-out;
   transition: transform 100ms ease-out;
@@ -424,8 +455,27 @@ i {
   padding: 3rem 0 1rem;
 }
 
-.projects h2, .projects p {
+.projects h2,
+.projects p {
   color: white;
+}
+
+.row,
+.about {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: opacity 300ms ease-in, -webkit-transform 200ms ease-in-out;
+  transition: opacity 300ms ease-in, -webkit-transform 200ms ease-in-out;
+  transition: opacity 300ms ease-in, transform 200ms ease-in-out;
+  transition: opacity 300ms ease-in, transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.row.in-view,
+.about.in-view {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .row {
@@ -481,7 +531,7 @@ i {
 .live-site {
   background: white;
   color: black;
-  padding: .4rem;
+  padding: 0.4rem;
   border-radius: 3px;
   -webkit-transition: 250ms ease;
   transition: 250ms ease;
@@ -527,10 +577,13 @@ form {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
-.name-input, .email-input, .message-input, .submit-btn {
+.name-input,
+.email-input,
+.message-input,
+.submit-btn {
   border-radius: 5px;
   font-family: inherit;
   font-size: 1rem;
@@ -606,11 +659,12 @@ footer h6 {
   border-top: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-footer p, footer h6 {
+footer p,
+footer h6 {
   color: white;
   font-weight: 400;
   opacity: 0.5;
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding: 1rem 0;
   -webkit-transition: opacity 200ms ease;
   transition: opacity 200ms ease;
@@ -642,7 +696,8 @@ footer h6 a:link {
   .nav-header:hover {
     background: rgba(255, 255, 255, 0.96) !important;
   }
-  .nav-header:hover .logo, .nav-header:hover .nav-item a {
+  .nav-header:hover .logo,
+  .nav-header:hover .nav-item a {
     color: black !important;
   }
   .nav-header .logo {
@@ -687,11 +742,11 @@ footer h6 a:link {
   .nav-header .nav-menu .nav-item::before {
     background: black;
     background: #3523aa;
-    content: '';
+    content: "";
     display: block;
     height: 3px;
     position: absolute;
-    top: -.5rem;
+    top: -0.5rem;
     left: 0;
     right: 0;
     opacity: 0;
@@ -732,7 +787,7 @@ footer h6 a:link {
     position: relative;
   }
   .about::before {
-    content: '';
+    content: "";
     background: black radial-gradient(circle at bottom right, #3523aa, rgba(53, 35, 170, 0.7));
     -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
             clip-path: polygon(0 0, 100% 0, 0 100%);
@@ -743,7 +798,7 @@ footer h6 a:link {
     position: absolute;
   }
   .about::after {
-    content: '';
+    content: "";
     background: black radial-gradient(circle at bottom right, #3523aa, rgba(53, 35, 170, 0.7));
     -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
             clip-path: polygon(100% 0, 0% 100%, 100% 100%);
