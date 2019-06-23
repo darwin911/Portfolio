@@ -1,255 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-134670953-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Darwin Smith | Web Developer</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-</head>
+      gtag("config", "UA-134670953-1");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="Full Stack Developer | React, Express, HTML5, CSS3, Sass, PostgreSQL"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Darwin Smith | Full Stack Developer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+      integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/favicon_io/site.webmanifest" />
+  </head>
 
-<body>
+  <body>
+    <header class="nav-header">
+      <a class="logo" href="#hero">Darwin Smith</a>
+      <input
+        id="nav-toggle"
+        class="nav-toggle"
+        type="checkbox"
+        name="nav-toggle"
+        value=""
+      />
 
-  <header class="nav-header">
+      <nav class="nav-menu">
+        <ul>
+          <li class="nav-item"><a href="#about">About</a></li>
+          <li class="nav-item"><a href="#projects">Projects</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- /nav-menu -->
 
-    <a class="logo" href="#hero">Darwin Smith</a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" name="nav-toggle" value="">
+      <label class="nav-toggle-label" for="nav-toggle">
+        <span></span>
+        <!-- Hamburger Button for Mobile -->
+      </label>
+    </header>
 
-    <nav class="nav-menu">
-      <ul>
-        <li class="nav-item"><a href="#about">About</a></li>
-        <li class="nav-item"><a href="#projects">Projects</a></li>
-        <li class="nav-item"><a href="#contact">Contact</a></li>
-      </ul> 
-    </nav>        <!-- /nav-menu -->
-
-    <label for="nav-toggle" class="nav-toggle-label">
-      <span></span> <!-- Hamburger Button for Mobile -->
-    </label>
-
-  </header>
-
-  <main>
-    
-                  <!-- Hero -->
-    <section id="hero" class="hero">
-
-      <div class="titlebox">
-        <div class="hero-text-container">
-          <h1 class="hero-title">Web</h1>
-          <h1 class="hero-title developer">Developer</h1>
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="hero">
+        <div class="titlebox">
+          <div class="hero-text-container">
+            <h1 class="hero-title">Web</h1>
+            <h1 class="hero-title developer">Developer</h1>
+          </div>
         </div>
-        <p class="hero-subtitle">My analytical skills and authenticity along with my experience in the Legal, and Service & Hospitality industries has helped me prioritize, organize my workspace and set clear goals for projects.</p>
-      </div>
-    
-    </section>    <!-- /Hero -->
-    
-                  <!-- About -->
-    <section id="about" class="about">
-      <img id="profile-pic" class="profile-pic" src="img/profile-lowres.jpg" alt="headshot of Darwin Smith">
-      <h2 class="section-title">Skills &amp; Tools</h2>
-      <ul>
-        <li>
-          <i class="fab fa-html5 icon-size"></i>
-          <h4 class='about-subtitle block'>HTML5</h4>
-        </li>
-        <li>
-          <i class="fab fa-css3-alt icon-size"></i>
-          <h4 class='about-subtitle block'>CSS3</h4>
-        </li>
-        <li>
-          <i class="fab fa-js-square icon-size"></i>
-          <h4 class='about-subtitle block'>JavaScript</h4>
-        </li>
-        <li>
-          <i class="fas fa-code icon-size"></i>
-          <h4 class='about-subtitle block'>jQuery</h4>
-        </li>
-        <li>
-          <i class="fab fa-react icon-size"></i>
-          <h4 class='about-subtitle block'>React</h4>
-        </li>
-        <li>
-          <i class="fab fa-git-square icon-size"></i>
-          <h4 class='about-subtitle block'>Git</h4>
-        </li>
-        <li>
-          <i class="fab fa-github icon-size"></i>
-          <h4 class='about-subtitle block'>Github</h4>
-        </li>
-        <li>
-          <i class="slack icon-size"></i>
-          <h4 class='about-subtitle block'>Slack</h4>
-        </li>
-        <li>
-          <i class="fab express icon-size"></i>
-          <h4 class='about-subtitle block'>Express.js</h4>
-        </li>
-        <li>
-          <i class="fas fa-database icon-size"></i>
-          <h4 class='about-subtitle block'>PostgreSQL</h4>
-        </li>
-        <li>
-          <i class="fab fa-npm icon-size"></i>
-          <h4 class='about-subtitle block'>NPM</h4>
-        </li>
-        <li>
-          <i class="ruby icon-size"></i>
-          <h4 class='about-subtitle block'>Ruby</h4>
-        </li>
-        <li>
-          <i class="aws icon-size"></i>
-          <h4 class='about-subtitle block'>AWS</h4>
-        </li>
-        <li>
-          <i class="fab fa-node icon-size"></i>
-          <h4 class='about-subtitle block'>Node.js</h4>
-        </li>
-      </ul>
-    </section>    <!-- /About -->
-    
-                  <!-- Projects -->
-    <section id="projects" class="projects">
+      </section>
+      <!-- /Hero -->
 
-      <h2 class="section-title">Projects</h2>
+      <!-- About -->
+      <section id="about" class="about">
+        <img
+          id="profile-pic"
+          class="profile-pic"
+          src="img/profile-lowres.jpg"
+          alt="headshot of Darwin Smith"
+        />
+        <p class="about-subtitle">
+          New York City based Full Stack Developer, with a background in Law,
+          Human Rights, and experience in the Service and Hospitality industry.
+          I am passionate about <span>quality</span>,
+          <span>efficiency</span> and <span>effective problem-solving</span>.
+        </p>
 
-      <ul class="gallery container">
-        
-        <li class="row">
-          <header>
-            <img class="project-pic" src="img/vinyl.png" alt="Vinyl" />
-            <div class="project-links">
-                <a class="live-site" href="https://vinyl.surge.sh" target="_blank">Live Site</a>
-                <a href="https://github.com/darwin911/vinyl-express" target="_blank">
+        <p class="about-subtitle">
+          Anything I do, I do to the best of my abilities and circumstances. I
+          am determined, detail-oriented, and excited to make the world and the
+          web a better place.
+        </p>
+        <h2 class="section-title">Skills &amp; Tools</h2>
+        <ul>
+          <li>
+            <i class="fab fa-html5 icon-size"></i>
+            <h4>HTML5</h4>
+          </li>
+          <li>
+            <i class="fab fa-css3-alt icon-size"></i>
+            <h4>CSS3</h4>
+          </li>
+          <li>
+            <i class="javascript icon-size"></i>
+            <h4>JavaScript (ES6)</h4>
+          </li>
+          <li>
+            <i class="jquery icon-size"></i>
+            <h4>jQuery</h4>
+          </li>
+          <li>
+            <i class="fab fa-react icon-size"></i>
+            <h4>React</h4>
+          </li>
+          <li>
+            <i class="fab express icon-size"></i>
+            <h4>Express.js</h4>
+          </li>
+          <li>
+            <i class="postgresql icon-size"></i>
+            <h4>PostgreSQL</h4>
+          </li>
+          <li>
+            <i class="git icon-size"></i>
+            <h4>Git</h4>
+          </li>
+          <li>
+            <i class="fab fa-github icon-size"></i>
+            <h4>Github</h4>
+          </li>
+          <li>
+            <i class="slack icon-size"></i>
+            <h4>Slack</h4>
+          </li>
+          <li>
+            <i class="npm icon-size"></i>
+            <h4>npm</h4>
+          </li>
+          <li>
+            <i class="ruby icon-size"></i>
+            <h4>Ruby</h4>
+          </li>
+          <li>
+            <i class="aws icon-size"></i>
+            <h4>AWS</h4>
+          </li>
+          <li>
+            <i class="fab fa-node icon-size"></i>
+            <h4>Node.js</h4>
+          </li>
+        </ul>
+      </section>
+      <!-- /About -->
+
+      <!-- Projects -->
+      <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <ul class="gallery container">
+          <li class="row">
+            <header>
+              <img class="project-pic" src="img/vinyl.png" alt="Vinyl" />
+              <div class="project-links">
+                <a
+                  class="live-site"
+                  href="https://vinyl.surge.sh"
+                  target="_blank"
+                  rel="noopener"
+                  rel="noopener"
+                  >Live Site</a
+                >
+                <a
+                  href="https://github.com/darwin911/vinyl-express"
+                  target="_blank"
+                  rel="noopener"
+                  rel="noopener"
+                >
                   <i class="fab fa-github project-icon-github"></i>
                 </a>
-            </div>  
-          </header>
+              </div>
+            </header>
 
-          <p class="img-description">Vinyl was built with on an Express server with a React front-end with CRUD (Create, Read, Update and Delete). All UI Controls were custom made and controlled with state. Tracks are uploaded through my express server to an AWS S3 Bucket.</p>
+            <p class="img-description">
+              Vinyl, a CRUD app, built with an Express server and a React
+              front-end. The UI controls are custom made and controlled with
+              state. Tracks are uploaded through the express server to an AWS S3
+              Bucket.
+            </p>
+          </li>
 
-        </li>
+          <li class="row">
+            <header>
+              <img class="project-pic" src="img/octave.png" alt="Octave" />
+              <div class="project-links">
+                <a
+                  class="live-site"
+                  href="https://octave-bananas.surge.sh"
+                  target="_blank"
+                  rel="noopener"
+                  rel="noopener"
+                  >Live Site</a
+                >
+                <a
+                  href="https://github.com/darwin911/octave"
+                  target="_blank"
+                  rel="noopener"
+                  rel="noopener"
+                >
+                  <i class="fab fa-github icon-size project-icon-github"></i>
+                </a>
+              </div>
+            </header>
 
-        <li class="row">
-          <header>
-            <img class="project-pic" src="img/octave.png" alt="Octave">
-            <div class="project-links">
-              <a class="live-site" href="https://octave-bananas.surge.sh" target="_blank">Live Site</a>
-              <a href="https://github.com/darwin911/octave" target="_blank">
-                <i class="fab fa-github icon-size project-icon-github"></i>
-              </a>
-            </div>
-          </header>
+            <p class="img-description">
+              A collaborative React App built with Express on Node.js and
+              accessing data from the Ticketmaster API. Design based off a
+              mock-up from a UI/UX design team of students at General Assembly.
+            </p>
+          </li>
 
-          <p class="img-description">A collaborative React App built with Express on Node.js and accessing data from the Ticketmaster API. Design based off a mock-up from a UI/UX design team of students at General Assembly.</p>
-        </li>
+          <li class="row">
+            <header>
+              <img class="project-pic" src="img/pong.png" alt="Pong" />
+              <div class="project-links">
+                <a
+                  class="live-site"
+                  href="https://pong-js.netlify.com"
+                  target="_blank"
+                  rel="noopener"
+                  rel="noopener"
+                  >Live Site</a
+                >
+                <a
+                  href="https://github.com/darwin911/pong"
+                  target="_blank"
+                  rel="noopener"
+                  rel="noopener"
+                  ><i class="fab fa-github icon-size project-icon-github"></i
+                ></a>
+              </div>
+            </header>
+            <p class="img-description">
+              Built a one player version of the classic arcade game Pong in
+              vanilla JavaScript during the Web Development Immersive (WDI)
+              course at General Assembly. Wrote custom collision detection
+              responsive to browser size and mobile devices.
+            </p>
+          </li>
 
-        <li class="row">
-          <header>
-            <img class="project-pic" src="img/pong.png" alt="Pong">
-            <div class="project-links">
-              <a class="live-site" href="https://pong-js.netlify.com" target="_blank" class="live-site">Live Site</a>
-              <a href="https://github.com/darwin911/pong" target="_blank"><i class="fab fa-github icon-size project-icon-github"></i></a>
-            </div>
-          </header>
-          <p class="img-description">Built a one player version of the classic arcade game Pong in vanilla JavaScript during the Web Development Immersive (WDI) course at General Assembly. Wrote custom collision detection responsive to browser size and mobile devices.</p>
-        </li>
+          <li class="row">
+            <header>
+              <img
+                class="project-pic"
+                src="img/citibikeStations.png"
+                alt="Citibike Stations"
+              />
 
-        <li class="row">
-          <header>
-            <img class="project-pic" src="img/citibikeStations.png" alt="Citibike Stations">
+              <div class="project-links">
+                <a
+                  class="live-site"
+                  href="https://citibike-react.netlify.com"
+                  target="_blank"
+                  rel="noopener"
+                  rel="noopener"
+                  >Live Site</a
+                >
+                <a
+                  href="https://github.com/darwin911/citibike-react"
+                  target="_blank"
+                  rel="noopener"
+                  rel="noopener"
+                  ><i class="fab fa-github icon-size project-icon-github"></i
+                ></a>
+              </div>
+            </header>
 
-            <div class="project-links">
-              <a class="live-site" href="https://citibike-react.netlify.com" target="_blank" >Live Site</a>
-              <a href="https://github.com/darwin911/citibike-react" target="_blank"><i class="fab fa-github icon-size project-icon-github"></i></a>
-            </div>
-          </header>
-          
-          <p class="img-description">React App with custom CSS (Flexbox and Grid), using Mapbox and Google Maps Geocoding API powered inputs. Lots of love, too.</p>
-        </li>
+            <p class="img-description">
+              React App with custom CSS (Flexbox and Grid), using Mapbox and
+              Google Maps Geocoding API powered inputs. Lots of love, too.
+            </p>
+          </li>
 
-        <li class="row">
-          <header>
-            <img class="project-pic" src="img/postpic.png" alt="PostPic">
-            
-            <div class="project-links">
-              <a class="live-site" href="http://luxuriant-bun.surge.sh/" target="_blank">Live Site</a>
-              <a href="https://github.com/darwin911/imageSharingCRUD" target="_blank">
-                <i class="fab fa-github icon-size project-icon-github"></i>
-              </a>
-            </div>
-          </header>
+          <li class="row">
+            <header>
+              <img class="project-pic" src="img/postpic.png" alt="PostPic" />
 
-          <p class="img-description">React App on Express (node.js) server. This project was built to mimic web-apps/apps such as Instagram.</p>
-        </li>
+              <div class="project-links">
+                <a
+                  class="live-site"
+                  href="http://luxuriant-bun.surge.sh/"
+                  target="_blank"
+                  rel="noopener"
+                  >Live Site</a
+                >
+                <a
+                  href="https://github.com/darwin911/imageSharingCRUD"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fab fa-github icon-size project-icon-github"></i>
+                </a>
+              </div>
+            </header>
 
-        <li class="row">
-          <a href="sagan/index.html" target="_blank"><img class="project-pic" src="img/sagan.png" alt="Screenshot of tribute webiste for Carl Sagan"></a>
-          <p class="img-description">Created a Carl Sagan tribute website using Bootstrap 4 on CodePen while completing the Front-End Develeopment Course on FreeCodeCamp.</p>
-        </li>
+            <p class="img-description">
+              React App on Express (node.js) server. This project was built to
+              mimic web-apps/apps such as Instagram.
+            </p>
+          </li>
 
-        <li class="row">
-          <a href="bike/index.html" target="_blank"><img class="project-pic" src="img/skywalker2.png" alt="Screenshot of a website for Darwin's bike'Skywalker'"></a>
-          <p class="img-description">Skywalker was one of my first websites I made from scratch with only HTML5 and CSS3. It also exemplifies my passion for my favorite hobby other than coding: Cycling.</p>
-        </li>
+          <li class="row">
+            <a
+              href="http://www.juegacomocampeon.org"
+              target="_blank"
+              rel="noopener"
+              ><img
+                class="project-pic"
+                src="img/jcc.png"
+                alt="Screenshot of tribute webiste for Juega Como Campeon"
+            /></a>
+            <p class="img-description">
+              Designed and built a static website for a non-profit working with
+              underpriviledged children in the Dominican Republic.
+            </p>
+          </li>
 
-        <li class="row">
-          <a href="netherpurge/index.html" target="_blank"><img class="project-pic" src="img/netherpurge.png" alt="Netherpurge"></a>
-          <p class="img-description">Made Netherpurge while experimenting on new techniques for navbars and CSS3 animations. The small line that pops up on hover was made with pseudo elements (::before &amp; ::after). Used span tags to create different effects within lines of text, linear gradients, and using transparency were among other things I practiced while creating Netherpurge.</p>
-        </li>
+          <li class="row">
+            <a href="sagan/index.html" target="_blank" rel="noopener"
+              ><img
+                class="project-pic"
+                src="img/sagan.png"
+                alt="Screenshot of tribute webiste for Carl Sagan"
+            /></a>
+            <p class="img-description">
+              Created a Carl Sagan tribute website using Bootstrap 4 on CodePen
+              while completing the Front-End Development Course on FreeCodeCamp.
+            </p>
+          </li>
 
-        <li class="row">
-          <a href="calc/index.html" target="_blank"><img class="project-pic" src="img/calc.png" alt="Calculator"></a>
-          <p class="img-description">Created all buttons with an unordered list and added styles to make them look like such. Positioning was a bit tricky but helped me improve my CSS skills. JavaScript is what powers the actual functionality of the calculator. Event Listeners and functional programming was key for this project.</p>
-        </li>
+          <li class="row">
+            <a href="bike/index.html" target="_blank" rel="noopener"
+              ><img
+                class="project-pic"
+                src="img/skywalker2.png"
+                alt="Screenshot of a website for Darwin's bike'Skywalker'"
+            /></a>
+            <p class="img-description">
+              Skywalker was one of my first websites I made from scratch with
+              only HTML5 and CSS3. It also exemplifies my passion for my
+              favorite hobby other than coding: Cycling.
+            </p>
+          </li>
 
-        <li class="row">
-          <a href="fCC_ProductLandingPage/index.html" target="_blank"><img class="project-pic" src="img/fCC_ProductLandingPage.png" alt="freeCodeCamp Product Landing Page"></a>
-          <p class="img-description">Created a mockup of a Product Landing Page for freeCodeCamp Web Develeopment course. Used plain CSS to style all form and HTML elements, used SVG's for icons, included a YouTube video with an iframe tag for the first time, applied FlexBox and CSS Grid for layout, as well as media queries for Responsiveness.</p>
-        </li>
+          <li class="row">
+            <a href="netherpurge/index.html" target="_blank" rel="noopener"
+              ><img
+                class="project-pic"
+                src="img/netherpurge.png"
+                alt="Netherpurge"
+            /></a>
+            <p class="img-description">
+              Made Netherpurge while experimenting on new techniques for navbars
+              and CSS3 animations. The small line that pops up on hover was made
+              with pseudo elements (::before &amp; ::after). Used span tags to
+              create different effects within lines of text, linear gradients,
+              and using transparency were among other things I practiced while
+              creating Netherpurge.
+            </p>
+          </li>
 
-      </ul>       <!-- Gallery -->
+          <li class="row">
+            <a href="calc/index.html" target="_blank" rel="noopener"
+              ><img class="project-pic" src="img/calc.png" alt="Calculator"
+            /></a>
+            <p class="img-description">
+              Created all buttons with an unordered list and added styles to
+              make them look like such. Positioning was a bit tricky but helped
+              me improve my CSS skills. JavaScript is what powers the actual
+              functionality of the calculator. Event Listeners and functional
+              programming was key for this project.
+            </p>
+          </li>
 
-    </section>    <!-- /Projects -->
-                  <!-- Contact -->
-    <section id="contact" class="contact">
-      <h2 class="section-title">Contact</h2>
-      
-      <form action="https://formspree.io/darwinpsmith@gmail.com" method="POST">
-        
-        <input type="text" id="name" class="name-input" name="name" placeholder="Name" required>
+          <li class="row">
+            <a
+              href="fCC_ProductLandingPage/index.html"
+              target="_blank"
+              rel="noopener"
+              ><img
+                class="project-pic"
+                src="img/fCC_ProductLandingPage.png"
+                alt="freeCodeCamp Product Landing Page"
+            /></a>
+            <p class="img-description">
+              Created a mockup of a Product Landing Page for freeCodeCamp Web
+              Develeopment course. Used plain CSS to style all form and HTML
+              elements, used SVG's for icons, included a YouTube video with an
+              iframe tag for the first time, applied FlexBox and CSS Grid for
+              layout, as well as media queries for Responsiveness.
+            </p>
+          </li>
+        </ul>
+        <!-- Gallery -->
+      </section>
+      <!-- /Projects -->
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <h2 class="section-title">Contact</h2>
 
-        <input type="email" id="email" class="email-input"name="_replyto" placeholder="Email" required>
-        
-        <textarea name="message" id="message" class="message-input" placeholder="Type your message here" spellcheck="true" required></textarea>
+        <form
+          action="https://formspree.io/darwinpsmith@gmail.com"
+          method="POST"
+        >
+          <input
+            type="text"
+            id="name"
+            class="name-input"
+            name="name"
+            placeholder="Name"
+            required
+          />
 
-        <input  type="submit" id="submit" class="submit-btn" name="submit" value="Submit">
+          <input
+            type="email"
+            id="email"
+            class="email-input"
+            name="_replyto"
+            placeholder="Email"
+            required
+          />
 
-      </form>
+          <textarea
+            name="message"
+            id="message"
+            class="message-input"
+            placeholder="Type your message here"
+            spellcheck="true"
+            required
+          ></textarea>
 
-      <div class="email">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:darwinpsmith@gmail.com">darwinpsmith@gmail.com</a>
+          <input
+            type="submit"
+            id="submit"
+            class="submit-btn"
+            name="submit"
+            value="Submit"
+          />
+        </form>
+      </section>
+      <!-- Contact -->
+    </main>
+
+    <footer>
+      <div class="contact-links">
+        <a href="mailto:darwinpsmith@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/darwinpsmith/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/darwin911">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
-                          
-    </section>    <!-- Contact -->
-  
-  </main>
-  
-  <footer>
-    <p>Made with HTML5, CSS3, JavaScript & JQuery.</p>
-    <h6>Coded by &copy; <a href="mailto:darwinpsmith@gmail.com">Darwin Smith</a></h6>
-  </footer>
-                    <!-- Load jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-                  <!-- Load ScrollTo -->
-  <script src="http://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
-                  <!-- Load localScroll -->
-  <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
-  <script src="js/app.js"></script> 
-</body>
 
+      <h6>
+        &copy; <a href="mailto:darwinpsmith@gmail.com">Darwin Smith 2019</a>
+      </h6>
+    </footer>
+    <!-- Load jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Load ScrollTo -->
+    <script src="http://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+    <!-- Load localScroll -->
+    <script src="//cdn.jsdelivr.net/npm/jquery.localscroll@2.0.0/jquery.localScroll.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
