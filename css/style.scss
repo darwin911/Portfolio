@@ -142,6 +142,11 @@ a:visited {
   }
 }
 
+.about:hover::before,
+.about:hover::after {
+  opacity: 1;
+}
+
 .fa-html5 {
   color: #e34f26;
 }
@@ -523,36 +528,38 @@ footer {
   .about {
     position: relative;
 
-    &::before {
+    &::before,
+    &::after {
       content: "";
+      opacity: 0.85;
+      position: absolute;
+      width: 70vw;
+      height: 125px;
+      transition: opacity 200ms ease;
+    }
+
+    &::before {
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+      left: 0;
+      top: 0;
       background: black
         radial-gradient(
           circle at bottom right,
           $accentBlue,
           rgba(53, 35, 170, 0.7)
         );
-      clip-path: polygon(0 0, 100% 0, 0 100%);
-      width: 70vw;
-      height: 125px;
-      left: 0;
-      top: 0;
-      position: absolute;
     }
 
     &::after {
-      content: "";
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+      right: 0;
+      bottom: 0;
       background: black
         radial-gradient(
           circle at bottom right,
           $accentBlue,
           rgba(53, 35, 170, 0.7)
         );
-      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-      width: 70vw;
-      height: 125px;
-      right: 0;
-      bottom: 0;
-      position: absolute;
     }
 
     ul {

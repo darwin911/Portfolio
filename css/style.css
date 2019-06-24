@@ -344,6 +344,11 @@ a:visited {
   opacity: 1;
 }
 
+.about:hover::before,
+.about:hover::after {
+  opacity: 1;
+}
+
 .fa-html5 {
   color: #e34f26;
 }
@@ -786,27 +791,28 @@ footer h6 a:link {
   .about {
     position: relative;
   }
-  .about::before {
+  .about::before, .about::after {
     content: "";
-    background: black radial-gradient(circle at bottom right, #3523aa, rgba(53, 35, 170, 0.7));
+    opacity: 0.85;
+    position: absolute;
+    width: 70vw;
+    height: 125px;
+    -webkit-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
+  }
+  .about::before {
     -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
             clip-path: polygon(0 0, 100% 0, 0 100%);
-    width: 70vw;
-    height: 125px;
     left: 0;
     top: 0;
-    position: absolute;
+    background: black radial-gradient(circle at bottom right, #3523aa, rgba(53, 35, 170, 0.7));
   }
   .about::after {
-    content: "";
-    background: black radial-gradient(circle at bottom right, #3523aa, rgba(53, 35, 170, 0.7));
     -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
             clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    width: 70vw;
-    height: 125px;
     right: 0;
     bottom: 0;
-    position: absolute;
+    background: black radial-gradient(circle at bottom right, #3523aa, rgba(53, 35, 170, 0.7));
   }
   .about ul {
     margin-bottom: 7rem;
